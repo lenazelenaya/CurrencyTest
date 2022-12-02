@@ -1,0 +1,29 @@
+databaseChangeLog:
+  - changeSet:
+      id: currency-table
+      author: lenaz
+      changes:
+        - createTable:
+            tableName: currency
+            columns:
+              - column:
+                  name: id
+                  type: bigserial
+                  autoIncrement: true
+                  constraints:
+                    primaryKey: true
+                    nullable: false
+              - column:
+                  name: currency_name
+                  type: varchar(200)
+              - column:
+                  name: digital_code
+                  type: int
+              - column:
+                  name: letter_code
+                  type: varchar(3)
+                  constraints:
+                    unique: true
+              - column:
+                  name: rate
+                  type: double precision

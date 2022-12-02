@@ -1,0 +1,44 @@
+databaseChangeLog:
+  - changeSet:
+      id: insert-values
+      author: lenaz
+      changes:
+        - insert:
+            columns:
+              - column:
+                  name: currency_name
+              - column:
+                  name: digital_code
+              - column:
+                  name: letter_code
+                  value: EUR
+              - column:
+                  name: rate
+            schemaName: public
+            tableName: currency
+        - insert:
+            columns:
+              - column:
+                  name: currency_name
+              - column:
+                  name: digital_code
+              - column:
+                  name: letter_code
+                  value: USD
+              - column:
+                  name: rate
+            schemaName: public
+            tableName: currency
+        - insert:
+            columns:
+              - column:
+                  name: currency_name
+              - column:
+                  name: digital_code
+              - column:
+                  name: letter_code
+                  value: GBP
+              - column:
+                  name: rate
+            schemaName: public
+            tableName: currency

@@ -1,0 +1,14 @@
+#Get all currencies that are stored in DB for now
+GET http://localhost:8080
+
+###
+
+#Request for current rates to NBU API
+POST http://localhost:8080
+
+###
+
+#Request to add new currency and it rate to db. This request is for adding DKK currency.
+#You can place there any other letter code
+
+POST http://localhost:8080/add?letterCode=DKK
